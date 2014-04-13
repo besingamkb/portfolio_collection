@@ -5,8 +5,9 @@
 	</div>
 	<script src="assets/js/classie.js"></script>
 	<!--<script src="js/menu.js"></script>-->
-	<script src="assets/js/angular.js"></script>
-	<script src="assets/js/apps.js">
+	<script src="<?php echo base_url(); ?>assets/js/angular.js"></script>
+	<script src="<?php echo base_url(); ?>assets/js/angular-routes.js"></script>
+	<script src="<?php echo base_url(); ?>assets/js/apps.js">
 	</script>
 </body>
 </html>

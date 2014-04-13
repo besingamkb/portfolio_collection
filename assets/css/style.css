@@ -13,6 +13,10 @@ body {
 	background: url(../images/gridme.png);
 }
 
+.clearfloat {
+   clear: both;
+}
+
 .main-wrapper {
 	width: 100%;
 }
@@ -237,4 +241,76 @@ p.beta {
    padding-top: 10px;
    padding-left: 20px;
 }
-				
+
+
+.simple_menu {
+   font-size: 20px;
+   font-weight: bold;
+}	
+
+.simple_menu span a {
+   text-decoration: none;
+   font-weight: normal;
+   font-size: 14px;
+   color: #444;
+}		
+
+.simple_menu span a:hover {
+   color: #999;
+}	
+
+.aboutme {
+   margin-left: 20px;
+   margin-right: 20px;  
+   padding-bottom: 20px;
+}
+
+.aboutme .separator h1 {
+   border: none;
+   padding-bottom: 10px;
+   border-bottom: 1px #e2e2e2 dashed;
+}
+
+.edulevel {
+   list-style: none;
+}
+
+.skill {
+   width: 960px;
+   margin: 0 auto;
+   margin-left: 35px;
+   margin-bottom: 10px;
+   margin-top: 10px;
+
+}
+
+.skills {
+   width: 480px;
+   min-height: 200px;
+   float: left;
+}
+
+.skills h3 {
+   padding: 0;
+   margin: 0;
+   font-size: 25px;
+}
+
+.skills span {
+   font-size: 14px;
+   font-style: italic;
+}
+
+.skillstitle {
+   width: 200px;
+   text-align: justify;
+   float: left;
+}
+
+.skillsitems {
+   float: left;
+}
+
+
+
+

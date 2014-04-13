@@ -1,140 +1,103 @@
 mysite = angular.module('mysite', []);
 
+
+
+
 var controllers = {};
 
 controllers.portfolio = function($scope, $http) {
-	// $scope.projects = [
-	// 	{
-	// 		order: 1,
-	// 		projects: 'commercial',
-	// 		name: 'Goweb Hosting Solution',
-	// 		desc: 'Main website, Product catalog.',
-	// 		type: 'Drupal 7',
-	// 		screenshot: 'image/test2.png',
-	// 		url: 'http://www.gowebhosting.ph/'
-	// 	},
-	// 	{
-	// 		order: 2,
-	// 		projects: 'commercial',
-	// 		name: 'Goweb Hosting Billing',
-	// 		desc: 'Portal, Web Hosting Management, Billing',
-	// 		type: 'WHMCS, bootstrap',
-	// 		screenshot: 'image/test3.png',
-	// 		url: 'http://portal.gowebhosting.ph/domainchecker.php'
-	// 	},
-	// 	{
-	// 		order: 3,
-	// 		projects: 'commercial',
-	// 		name: 'Goweb Hosting Design',
-	// 		desc: 'Goweb Portfolio, Free design, Design',
-	// 		type: 'Codeigniter, Zurb',
-	// 		screenshot: 'image/test4.png',
-	// 		url: 'http://portal.gowebhosting.ph/domainchecker.php',
-
-	// 	},
-	// 	{
-	// 		order: 4,
-	// 		projects: 'commercial',
-	// 		name: 'Hijo Resources',
-	// 		desc: 'Content Management',
-	// 		type: 'Dreamweaver, php, js',
-	// 		screenshot: 'image/test5.png',
-	// 		url: 'http://www.hijoresources.net/'
-	// 	},
-	// 	{
-	// 		order: 5,
-	// 		projects: 'commercial',
-	// 		name: 'Planet Gadget',
-	// 		desc: 'CMS, Ecommerse,  Product Catalog',
-	// 		type: 'Joomla',
-	// 		screenshot: 'image/test6.png',
-	// 		url: 'http://www.planetgadgetph.com/'
-	// 	},
-	// 	{
-	// 		order: 6,
-	// 		projects: 'commercial',
-	// 		name: 'We design, We shoot',
-	// 		desc: 'Product Catalog',
-	// 		type: 'PHP, JS, HTML, CSS',
-	// 		screenshot: 'image/test7.png',
-	// 		url: 'http://wedesignweshoot.com/'
-	// 	},
-	// 	{
-	// 		order: 7,
-	// 		projects: 'commercial',
-	// 		name: 'LMCGLAW',
-	// 		desc: 'N/A',
-	// 		type: 'PHP, JS, HTML, CSS',
-	// 		screenshot: 'image/lmcg-law.png',
-	// 		url: 'http://lmcglaw.com/'
-	// 	},
-	// 	{
-	// 		order: 8,
-	// 		projects: 'commercial',
-	// 		name: 'Mercury Drug Store',
-	// 		desc: 'Product Catalog, Store Locator, Inquiries page',
-	// 		type: 'JS, HTML, CSS',
-	// 		screenshot: 'image/mercury-drug-store.png',
-	// 		url: 'https://www.mercurydrug.com/index.html'
-	// 	},
-	// 	{
-	// 		order: 9,
-	// 		name: 'Abby Golf- Abby Arevalo',
-	// 		desc: 'Personal Profile, Archive, Gallery',
-	// 		type: 'Wordpress Theming, Wordpress Development',
-	// 		screenshot: 'image/abby2.png',
-	// 		url: 'http://abby-golf.com/stagging/',
-	// 	},
-	// 	{
-	// 		order: 10,
-	// 		projects: 'commercial',
-	// 		name: 'Marc Dios Ababa',
-	// 		desc: 'Product Catalog, Blog',
-	// 		type: 'Joomla',
-	// 		screenshot: 'image/marcdiosababa.png',
-	// 		url: 'http://marcdiosababa.com/stagging'
-	// 	},
-	// 	{
-	// 		order: 11,
-	// 		projects: 'commercial',
-	// 		name: 'Waterfront contailer',
-	// 		desc: 'Product Catalog',
-	// 		type: 'Wordpress Theming, Plugin, Development',
-	// 		screenshot: 'image/test1.png',
-	// 		url: 'http://waterfrontcontainer.ph/'
-	// 	},
-	// 	{
-	// 		order: 12,
-	// 		projects: 'studies',
-	// 		name: 'DDG - Magazine [UNFINISH]',
-	// 		desc: 'Product Catalog, Blog, archieve',
-	// 		type: 'PSD TO HTML / static / stagging',
-	// 		screenshot: 'image/ddg-mag.png',
-	// 		url: 'http://digimarketing.github.io/DDG-magazine/'
-	// 	},
-	// 	{
-	// 		order: 13,
-	// 		name: 'Double Dragon Properties',
-	// 		desc: 'N/A',
-	// 		type: 'Wordpress Plugin',
-	// 		screenshot: 'image/doubledragon.png',
-	// 		url: 'http://doubledragon.com.ph/'
-	// 	},
-	// 	{
-	// 		order: 14,
-	// 		name: 'Mrs. Fields',
-	// 		desc: 'Product Catalog, Store Locator, Plugins',
-	// 		type: 'Wordpress Plugin, Wordpress Theming',
-	// 		screenshot: 'image/mrsfields.png',
-	// 		url: 'http://mrsfields.com.ph/'
-	// 	}
-	// ];
+	
 
 	$http.get('main/jsonprojects').success(function(data) {
 		// console.log(data);
 
 		$scope.projects = data;
 	});
+
+}
+
+controllers.aboutme = function($scope, $http) {
+
+	// blackstar &#9733
+	// whitestar &#9734
+
+
+
+
+	$scope.objectiveTitle = "Objectives";
+	$scope.objective = "Seeking for a prospective career programming field that utilize my skills and education.";
+
+	// education
+
+	$scope.educationName = "Education";
+	$scope.education = [
+		{
+			order: 1,
+			level: 'College',
+			schoolname: 'Infotech Institure of Arts and Sciences',
+			address: 'Mandaluyong City',
+			course: 'Computer Science (NCIV)',
+			year: '2010-2012'
+		},
+		{
+			order: 2,
+			level: 'Highschool',
+			schoolname: 'Caluya National Highschool',
+			address: 'Poblacion, Caluya isl., Antique',
+			year: '2006-2009'
+		},
+		{
+			order: 3,
+			level: 'Elementary',
+			schoolname: 'Divine Word School of Semirara Island Inc.',
+			address: 'Semirara Isl, Caluya, Antique',
+			year: '1999-2005'
+		}
+	];
+
+	//skill
+
+	$scope.skill = "Skills";
+
+	$scope.skills = [
+		{ 
+			name: 'php',
+			desc: 'is a server-side scripting language designed for web development but also used as a general-purpose programming language.' 
+		},
+		{ 
+			name: 'html/css',
+			desc: 'are two of the core technologies for building Web pages.'
+		},
+		{ 
+			name: 'javascript',
+			desc: 'is commonly used as part of web browsers, whose implementations allow client-side scripts to interact with the user, control the browser, communicate asynchronously, and alter the document content that is displayed.'
+		},
+		{ 
+			name: 'cms',
+			desc: 'is a computer program that allows publishing, editing and modifying content as well as maintenance from a central interface.' 
+		},
+		{ 
+			name: 'database',
+			desc: 'is an organized collection of data.'
+		},
+		{ 
+			name: 'adobe',
+			desc: 'a series of software suites of graphic design, video editing, and web development applications made or acquired by Adobe Systems.'
+		},
+		{ 
+			name: 'microsoft office',
+			desc: 'is an office suite of desktop applications, servers and services for the Microsoft Windows and OS X operating systems.' 
+		},
+		{ 
+			name: 'web server' 
+		},
+		{ 
+			name: 'operating system'
+		},
+		{ 
+			name: 'other' 
+		}
+	];
 
 }
 

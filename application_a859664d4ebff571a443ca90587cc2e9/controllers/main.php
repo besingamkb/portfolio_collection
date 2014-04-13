@@ -23,6 +23,13 @@ class Main extends CI_Controller {
 		$this->load->view(tportfolio, $data);
 	}
 
+	public function aboutme() {
+		$data['template'] = "about";
+		$data['title'] = "My Portfolio - Besingamk";
+
+		$this->load->view(tportfolio, $data);
+	}
+
 	public function jsonprojects() {
 		header("Content-Type: text/javascript");
 
@@ -34,32 +41,63 @@ class Main extends CI_Controller {
 			$projects[] = $project;
 		}
 
-		//print_r($projects);
-
-		// $testjson = array(
-		// 	array(
-		// 		'name' => "Goweb Hosting Solution",
-		// 		'type' => "Drupal 7"
-		// 	),
-		// 	array(
-		// 		'name' => "Goweb Hosting Billing",
-		// 		'type' => "WHMCS",
-		// 	),
-		// 	array(
-		// 		'name' => "Goweb Hosting Design",
-		// 		'type' => "Codeigniter"
-		// 	),
-		// 	array(
-		// 		'name' => "Hijo Resources",
-		// 		'type' => "Pure PHP, Pure JAVASCRIPT"
-		// 	)
-		// );
-
-		// echo json_encode($testjson); 
-
 		echo json_encode($projects);
+	}
 
+	public function aboutmeSkill() {
+		header('Content-Type: text/javascript');
 
+		echo ' [
+		{
+	        "fighters": [
+	            {
+	                "name": "Muhammad Ali",
+	                "nickname": "The Greatest",
+	                "image": "http://upload.wikimedia.org/wikipedia/commons/1/13/Clyde_The_Bulldog.jpg"
+	            },
+	            {
+	                "name": "Chuck Liddell",
+	                "nickname": "The Iceman",
+	                "image": "http://images.pictureshunt.com/pics/s/saint_bernard-12924.jpg"
+	            },
+	            {
+	                "name": "Rocky Marciano",
+	                "nickname": "The Brockton Blockbuster",
+	                "image": "http://www.goodhousekeeping.com/cm/goodhousekeeping/images/IO/alaskan-malamute-fb.jpg"
+	            },
+	            {
+	                "name": "Randy Couture",
+	                "nickname": "The Natural",
+	                "image": "http://slog.thestranger.com/files/2006/09/bigdog.jpg"
+	            },
+	            {
+	                "name": "Fedor Emelianenko",
+	                "nickname": "The Last Emperor",
+	                "image": "http://affordablehousinginstitute.org/blogs/us/wp-content/uploads/small_dog_on_big_dog.jpg"
+	            },
+	            {
+	                "name": "Jon Jones",
+	                "nickname": "Bones"
+	            },
+	            {
+	                "name": "George Foreman",
+	                "nickname": "Big George"
+	            },
+	            {
+	                "name": "Wanderlei Silva",
+	                "nickname": "The Axe Murderer"
+	            },
+	            {
+	                "name": "Gearges St. Pierre",
+	                "nickname": "Rush"
+	            },
+	            {
+	                "name": "Manny Pacquiao",
+	                "nickname": "Pac-Man"
+	            }
+	        ]
+	    } 
+	]';
 	}
 }
 
